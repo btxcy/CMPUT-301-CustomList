@@ -25,25 +25,21 @@ public class CustomListTest {
         return cityList;
     }
 
-//    @Before
-//    public void createList() {
-//        list = new CustomList(null, new ArrayList<City>());
-//    }
-//
-//    @Test
-//    public void addCityTest() {
-//        int listSize = list.getCount();
-//        list.addCity(new City("Halifax", "NS"));
-//        assertEquals(listSize + 1, list.getCount());
-//    }
+    @Before
+    public void createList() {
+        list = new CustomList(null, new ArrayList<City>());
+    }
+
+    @Test
+    public void addCityTest() {
+        int listSize = list.getCount();
+        list.addCity(new City("Halifax", "NS"));
+        assertEquals(listSize + 1, list.getCount());
+    }
 
     @Test
     public void checkHasCity() {
         CityList cityList = mockCityList();
-        // System.out.println(cityList);
-        // City city = new City("Vancouver", "BC");
-        // cityList.add(city);
-        // assertTrue(cityList.hasCity(city));
         assertTrue(cityList.hasCity(mockCity()));
     }
 

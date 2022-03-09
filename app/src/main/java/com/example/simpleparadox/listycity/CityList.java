@@ -10,7 +10,7 @@ public class CityList {
 
 
     public void add(City city) {
-        if (this.cities.contains(city)) {
+        if (this.contains(city)) {
             throw new IllegalArgumentException();
         }
         cities.add(city);
@@ -23,7 +23,7 @@ public class CityList {
     }
 
     public boolean hasCity(City city) {
-        return this.cities.contains(city);
+        return this.contains(city);
     }
 
     public void delete(City city) {
